@@ -7,7 +7,11 @@ import java.util.concurrent.Executors;
  * Created by tkom on 2019/6/13 0013.
  */
 public class TestThreadLocal {
+    /*
+    *一个线程可以根据ThreadLocal对象查询到绑定在这个线程上的值
+    */
     private static ThreadLocal<String> threadLocal = new ThreadLocal<>();
+    
     public static void main(String[] args) {
         ExecutorService threadService = Executors.newFixedThreadPool(5);
         threadService.execute(()->{
